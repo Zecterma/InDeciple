@@ -1,8 +1,7 @@
 package me.Zecterma.InDeciple;
 
 import net.milkbowl.vault.economy.Economy;
-
-
+import me.Zecterma.InDeciple.Commands.InDecipleCommand;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
