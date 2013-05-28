@@ -17,7 +17,7 @@ public class InDecipleCommand implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		if (cs instanceof Player) {
-			if(args.length ==+  2) {
+			if(args.length !=  0) {
 				cs.sendMessage(ChatColor.DARK_RED + "Wrong number of parameters");
 				return true;
 			}

@@ -9,10 +9,10 @@ commands:
     description: InDeciple Main command.
     usage: /InDeciple
     aliases: [indeciple]
-  indeciple list:
+  idcl:
     description: InDeciple Commands List
-    usage: /InDeciple list
-    aliases: [indeciple list]
+    usage: /idcl
+    aliases: [idcl]
     
 permissions:
   indeciple.indeciple:
