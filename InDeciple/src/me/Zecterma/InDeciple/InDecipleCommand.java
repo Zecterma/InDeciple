@@ -74,7 +74,7 @@ public class InDecipleCommand implements CommandExecutor {
               
           }
         }
-      }
+      
 	return false;
     }
 }
