@@ -1,26 +1,17 @@
 package me.Zecterma.InDeciple;
 
-import org.bukkit.Material;
+
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
 
-public class InDecipleCommand implements CommandExecutor {
 
-	
-	public InDecipleCommand(InDeciple inDeciple) {
-		
-	}
+public class InDecipleCommand {
 
-	@Override
+
 	public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args)
     {
       if ((sender instanceof Player)) {
-        Player player = (Player)sender;
         if ((commandLabel.equalsIgnoreCase("Idc")) || (commandLabel.equalsIgnoreCase("Idc"))) {
           if (args.length > 0)
           {
@@ -31,50 +22,14 @@ public class InDecipleCommand implements CommandExecutor {
                 sender.sendMessage("Welcome to InDeciple.");
                     }
                 }
+              
+              
+              
+              
+              
+              
                 return true;
-        }
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-          }
-        }
-      
+        }}}
 	return false;
     }
 }
