@@ -1,7 +1,6 @@
 package me.Zecterma.InDeciple.Commands;
 
 
-import net.milkbowl.vault.economy.Economy;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -12,40 +11,38 @@ import org.bukkit.entity.Player;
 
 public class InDecipleCommand implements CommandExecutor {
     
-	private Economy econ;
-	
 	public InDecipleCommand(InDeciple indeciple) {
-		this.econ = indeciple.economy;
 	}
 	
 	@Override
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		if (cs instanceof Player) {
-			if(args.length != 0) {
+			if(args.length ==+  2) {
 				cs.sendMessage(ChatColor.DARK_RED + "Wrong number of parameters");
 				return true;
 			}
-			//try {
-				//id = Integer.valueOf(args[0]);
-				//amount = Integer.valueOf(args[1]);
-				
-			//} catch (NumberFormatException mfe) {
-				//cs.sendMessage("You gotta give a number");
-				//return true;
-			//}
 			
-			if (label.equalsIgnoreCase("indeciple")){
+			
+			
+			
+			if (label.equalsIgnoreCase("indeciple")) {
 				cs.sendMessage(ChatColor.DARK_GREEN + "Welcome to InDeciple");
-						
-					} else {
+				
+			} else {
 						cs.sendMessage(ChatColor.DARK_RED + "Something went wrong.");
 						return true;
 					}
 					
 				}
+				
 
+		
+		
+		
 		return true;
-	}
+	
+	
+}
 }
 	
 	

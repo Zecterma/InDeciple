@@ -7,8 +7,14 @@ main: me.Zecterma.InDeciple.InDeciple
 commands:
   indeciple:
     description: InDeciple Main command.
+    usage: /InDeciple
     aliases: [indeciple]
+  indeciple list:
+    description: InDeciple Commands List
+    usage: /InDeciple list
+    aliases: [indeciple list]
+    
 permissions:
   indeciple.indeciple:
     default: op
-    description: This permission allows you to access /enderchestviewer command.
+    description: This permission allowes you to use /InDeciple
