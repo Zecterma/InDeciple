@@ -17,7 +17,7 @@ public class InDeciple extends JavaPlugin {
 		
 		getCommand("indeciple").setExecutor(new InDecipleCommand(this));
 		getCommand("idcl").setExecutor(new InDecipleListCommand(this));
-		getCommand("g").setExecutor(new InDecipleListCommand(this));
+		getCommand("gmmode").setExecutor(new InDecipleListCommand(this));
 
 
 	}

@@ -13,10 +13,10 @@ commands:
     description: InDeciple Commands List
     usage: /idcl
     aliases: [idcl]
-  g:
+  gmmode:
     description: Change gamemode.
     usage: /g
-    aliases: [g]
+    aliases: [g, s]
     
 permissions:
   indeciple.indeciple:
