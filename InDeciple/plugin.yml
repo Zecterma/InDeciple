@@ -1,0 +1,13 @@
+name: InDeciple
+version: 1.0.0
+author: Zecterma
+depend: [Vault]
+main: me.Zecterma.InDeciple.InDeciple
+
+commands:
+  indeciple:
+    description: InDeciple Main command.
+permissions:
+  indeciple.indeciple:
+    default: op
+    description: This permission allows you to access /enderchestviewer command.
