@@ -1,7 +1,7 @@
 package me.Zecterma.InDeciple;
 
-import net.milkbowl.vault.economy.Economy;
 import me.Zecterma.InDeciple.Commands.InDecipleCommand;
+import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,7 +14,7 @@ public class InDeciple extends JavaPlugin {
 		this.setupEconomy();
 		System.out.println("Starting InDeciple...");
 		
-		
+		getCommand("indeciple").setExecutor(new InDecipleCommand(this));
 		
 
 	}
