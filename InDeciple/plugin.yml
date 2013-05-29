@@ -7,16 +7,14 @@ main: me.Zecterma.InDeciple.InDeciple
 commands:
   indeciple:
     description: InDeciple Main command.
-    usage: /InDeciple
-    aliases: [indeciple]
   idcl:
     description: InDeciple Commands List
-    usage: /idcl
-    aliases: [idcl]
   gmmode:
     description: Change gamemode.
-    usage: /g
-    aliases: [g, s]
+    aliases: [g]
+  hello:
+    description: Says hello
+    usage: /hello
     
 permissions:
   indeciple.indeciple:

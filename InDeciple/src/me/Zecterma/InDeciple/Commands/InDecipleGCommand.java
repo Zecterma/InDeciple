@@ -22,13 +22,14 @@ public class InDecipleGCommand implements CommandExecutor {
 	}
 		public void readCommand(Player player, String command) {
 			if(command.equalsIgnoreCase("g")) {
+				if(player.getGameMode() == GameMode.SURVIVAL) {
 					player.setGameMode(GameMode.CREATIVE);
 					player.sendMessage(ChatColor.DARK_GREEN + "Now in" + ChatColor.GOLD + "creative" + ChatColor.DARK_GREEN + " mode.");
-				} else if (command.equalsIgnoreCase("s")) {
+				} else {
 					player.setGameMode(GameMode.SURVIVAL);
 					player.sendMessage(ChatColor.DARK_GREEN + "Now in" + ChatColor.GOLD + "survival" + ChatColor.DARK_GREEN + " mode.");
 				}
-				
+			}
 			}
 		}
 		
