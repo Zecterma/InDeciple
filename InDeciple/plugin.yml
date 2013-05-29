@@ -12,9 +12,9 @@ commands:
   gmmode:
     description: Change gamemode.
     aliases: [g]
-  hello:
-    description: Says hello
-    usage: /hello
+  idcf:
+    description: Fly etc.
+    aliases: [f, fspeed]
     
 permissions:
   indeciple.indeciple:

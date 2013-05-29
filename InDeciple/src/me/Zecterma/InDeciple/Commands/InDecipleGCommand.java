@@ -24,10 +24,10 @@ public class InDecipleGCommand implements CommandExecutor {
 			if(command.equalsIgnoreCase("g")) {
 				if(player.getGameMode() == GameMode.SURVIVAL) {
 					player.setGameMode(GameMode.CREATIVE);
-					player.sendMessage(ChatColor.DARK_GREEN + "Now in" + ChatColor.GOLD + "creative" + ChatColor.DARK_GREEN + " mode.");
+					player.sendMessage(ChatColor.DARK_GREEN + "Now in " + ChatColor.GOLD + "creative" + ChatColor.DARK_GREEN + " mode.");
 				} else {
 					player.setGameMode(GameMode.SURVIVAL);
-					player.sendMessage(ChatColor.DARK_GREEN + "Now in" + ChatColor.GOLD + "survival" + ChatColor.DARK_GREEN + " mode.");
+					player.sendMessage(ChatColor.DARK_GREEN + "Now in " + ChatColor.GOLD + "survival" + ChatColor.DARK_GREEN + " mode.");
 				}
 			}
 			}

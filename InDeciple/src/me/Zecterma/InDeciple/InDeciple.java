@@ -1,6 +1,7 @@
 package me.Zecterma.InDeciple;
 
 import me.Zecterma.InDeciple.Commands.InDecipleCommand;
+import me.Zecterma.InDeciple.Commands.InDecipleFlyCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleGCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleListCommand;
 import net.milkbowl.vault.economy.Economy;
@@ -19,6 +20,7 @@ public class InDeciple extends JavaPlugin {
 		getCommand("indeciple").setExecutor(new InDecipleCommand(this));
 		getCommand("idcl").setExecutor(new InDecipleListCommand(this));
 		getCommand("gmmode").setExecutor(new InDecipleGCommand(this));
+		getCommand("idcf").setExecutor(new InDecipleFlyCommand(this));
 
 
 	}
