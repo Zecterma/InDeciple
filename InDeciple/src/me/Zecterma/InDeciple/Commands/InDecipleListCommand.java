@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class InDecipleListCommand implements CommandExecutor {
-	public InDecipleListCommand(InDeciple idcl) {
+	public InDecipleListCommand(InDeciple indeciplelist) {
 	}
 	
 	@Override
@@ -24,15 +24,17 @@ public class InDecipleListCommand implements CommandExecutor {
 			
 			
 			
-			if (label.equalsIgnoreCase("idcl")) {
+			
 				cs.sendMessage(ChatColor.DARK_PURPLE + "/g " + ChatColor.DARK_GREEN + "- Switches gamemode");
+				cs.sendMessage(ChatColor.DARK_PURPLE + "/indeciplereload " + ChatColor.DARK_GREEN + "- Reloads the config");
+
 				
 			} else {
 						cs.sendMessage(ChatColor.DARK_RED + "Something went wrong.");
 						return true;
 					}
 					
-				}
+				
 				
 
 		

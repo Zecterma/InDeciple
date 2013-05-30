@@ -11,17 +11,17 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class InDecipleGCommand implements CommandExecutor {
-	public InDecipleGCommand(InDeciple gmmode) {
+	public InDecipleGCommand(InDeciple g) {
 	}
 	
-	
+	@Override
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		readCommand((Player) cs, label);
 		
 		return false;
 	}
 		public void readCommand(Player player, String command) {
-			if(command.equalsIgnoreCase("g")) {
+			
 				if(player.getGameMode() == GameMode.SURVIVAL) {
 					player.setGameMode(GameMode.CREATIVE);
 					player.sendMessage(ChatColor.DARK_GREEN + "Now in " + ChatColor.GOLD + "creative" + ChatColor.DARK_GREEN + " mode.");
@@ -29,7 +29,7 @@ public class InDecipleGCommand implements CommandExecutor {
 					player.setGameMode(GameMode.SURVIVAL);
 					player.sendMessage(ChatColor.DARK_GREEN + "Now in " + ChatColor.GOLD + "survival" + ChatColor.DARK_GREEN + " mode.");
 				}
-			}
+			
 			}
 		}
 		

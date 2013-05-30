@@ -8,12 +8,11 @@ commands:
   indeciple:
     description: InDeciple Main command.
   indeciplereload:
-    description: Reloads the config file.
-  idcl:
+    description: InDeciple config reload.
+  indeciplelist:
     description: InDeciple Commands List
-  gmmode:
+  g:
     description: Change gamemode.
-    aliases: [g]
 
     
 permissions:

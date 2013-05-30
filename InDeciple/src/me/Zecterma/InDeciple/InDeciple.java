@@ -10,6 +10,7 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,15 +20,15 @@ public class InDeciple extends JavaPlugin {
 
 	@Override
     public void onEnable(){
-		
+	    final FileConfiguration config = this.getConfig();
 		File file = new File(getDataFolder() + File.separator + "config.yml");
 		
 		if (!file.exists()){
 			this.getLogger().info("Generating config.yml...");
 			
-			this.getConfig().addDefault("message", "This is my message!");
-			this.getConfig().options().copyDefaults(true);
-			this.saveConfig();
+			config.addDefault("Welcome Message", "Welcome to InDeciple!");
+			config.options().copyDefaults(true);
+			saveConfig();
 		}
 		
 		
@@ -35,9 +36,9 @@ public class InDeciple extends JavaPlugin {
 		this.setupEconomy();
 		System.out.println("Starting InDeciple...");
 		
+		getCommand("indeciplelist").setExecutor(new InDecipleListCommand(this));
+		getCommand("g").setExecutor(new InDecipleGCommand(this));
 		getCommand("indeciple").setExecutor(new InDecipleCommand(this));
-		getCommand("idcl").setExecutor(new InDecipleListCommand(this));
-		getCommand("gmmode").setExecutor(new InDecipleGCommand(this));
 
 
 	}

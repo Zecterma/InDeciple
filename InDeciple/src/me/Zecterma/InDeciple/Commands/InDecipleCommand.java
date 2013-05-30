@@ -11,7 +11,10 @@ import org.bukkit.entity.Player;
 
 public class InDecipleCommand implements CommandExecutor {
     
-	public InDecipleCommand(InDeciple indeciple) {
+	private InDeciple plugin; // pointer to your main class, unrequired if you don't need methods from the main class
+
+	public InDecipleCommand(InDeciple plugin) {
+	this.plugin = plugin;
 	}
 	
 	@Override
@@ -25,15 +28,15 @@ public class InDecipleCommand implements CommandExecutor {
 			
 			
 			
-			if (label.equalsIgnoreCase("indeciple")) {
-				cs.sendMessage(ChatColor.DARK_GREEN + "Welcome to InDeciple");
+	
+				cs.sendMessage(ChatColor.DARK_GREEN + plugin.getConfig().getString("Welcome Message"));
 				
 			} else {
 						cs.sendMessage(ChatColor.DARK_RED + "Something went wrong.");
 						return true;
 					}
 					
-				}
+				
 				
 
 		
