@@ -8,6 +8,7 @@ import me.Zecterma.InDeciple.Commands.InDecipleCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleFreezeCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleGCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleListCommand;
+import me.Zecterma.InDeciple.Commands.InDecipleSetCommand;
 import net.milkbowl.vault.economy.Economy;
 
 import org.bukkit.ChatColor;
@@ -47,6 +48,7 @@ public class InDeciple extends JavaPlugin {
 		getCommand("g").setExecutor(new InDecipleGCommand(this));
 		getCommand("indeciple").setExecutor(new InDecipleCommand(this));
 		getCommand("freeze").setExecutor(new InDecipleFreezeCommand(this));
+		getCommand("set").setExecutor(new InDecipleSetCommand(this));
 
 
 	}

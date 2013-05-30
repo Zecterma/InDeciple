@@ -19,6 +19,9 @@ commands:
     
   freeze:
     description: Freeze yourself or other players
+    
+  set:
+    description: Gives you the item set you want.
 
     
 permissions:
@@ -32,6 +35,7 @@ permissions:
       indeciple.list: true
       indeciple.freeze: true
       indeciple.freeze.others: true
+      indeciple.set: true
   indeciple.indeciple:
     default: op
     description: Permission to /indeciple
@@ -50,3 +54,6 @@ permissions:
   indeciple.freeze.others:
     default: op
     description: Permissions to /freeze <name>
+  indeciple.set:
+    default: op
+    description: Permission to /set <itemset>
