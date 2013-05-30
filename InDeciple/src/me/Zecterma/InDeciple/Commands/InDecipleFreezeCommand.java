@@ -29,7 +29,7 @@ public class InDecipleFreezeCommand implements CommandExecutor {
 					sender.sendMessage(ChatColor.DARK_GREEN + "You froze yourself");
 					}
 				} else {
-					sender.sendMessage("You don't have permission to freeze yourself!");
+					sender.sendMessage(ChatColor.DARK_RED + "You don't have permission to freeze yourself!");
 				}
 				
 			} else if (args.length == 1) {
@@ -37,18 +37,20 @@ public class InDecipleFreezeCommand implements CommandExecutor {
 					if (sender.getServer().getPlayer(args[0]) != null) {
 						Player targetPlayer = sender.getServer().getPlayer(args[0]);
 						if (!plugin.hashmap.containsKey(targetPlayer)) {
-							sender.sendMessage("You froze " + targetPlayer.getName() + "!");
+							sender.sendMessage(ChatColor.DARK_GREEN + "You froze " + targetPlayer.getName() + "!");
 							plugin.hashmap.put(targetPlayer, null);
-							targetPlayer.sendMessage("You were frozen by" + sender.getName() + "!");
+							targetPlayer.sendMessage(ChatColor.DARK_GREEN + "You were frozen by" + sender.getName() + "!");
 						} else {
-							sender.sendMessage("You unforze" + targetPlayer.getName() + "!");
+							sender.sendMessage(ChatColor.DARK_GREEN + "You unforze" + targetPlayer.getName() + "!");
 							plugin.hashmap.remove(targetPlayer);
-							targetPlayer.sendMessage("You were unfrozen by" + sender.getName() + "!");
+							targetPlayer.sendMessage(ChatColor.DARK_GREEN + "You were unfrozen by" + sender.getName() + "!");
 							}
 
+					} else {
+						sender.sendMessage(ChatColor.DARK_RED + "That player isn't online");
 					}
 				} else {
-					sender.sendMessage("You don't have permission to freeze other people!");
+					sender.sendMessage(ChatColor.DARK_RED + "You don't have permission to freeze other people!");
 				}
 			}
 		}
