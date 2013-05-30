@@ -44,7 +44,7 @@ permissions:
   indeciple.reload:
     default: op
     description: Permission to /indeciplereload
-  indeciple.freeze
+  indeciple.freeze:
     default: op
     description: Permissions to /freeze
   indeciple.freeze.others:
