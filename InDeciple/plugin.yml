@@ -16,9 +16,22 @@ commands:
     
   g:
     description: Change gamemode.
+    
+  freeze:
+    description: Freeze yourself or other players
 
     
 permissions:
+  indeciple.*:
+    default: op
+    description: Access to all InDeciple commands
+    children:
+      indeciple.indeciple: true
+      indeciple.g: true
+      indeciple.reload: true
+      indeciple.list: true
+      indeciple.freeze: true
+      indeciple.freeze.others: true
   indeciple.indeciple:
     default: op
     description: Permission to /indeciple
@@ -31,3 +44,9 @@ permissions:
   indeciple.reload:
     default: op
     description: Permission to /indeciplereload
+  indeciple.freeze
+    default: op
+    description: Permissions to /freeze
+  indeciple.freeze.others:
+    default: op
+    description: Permissions to /freeze <name>

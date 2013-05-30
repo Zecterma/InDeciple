@@ -1,22 +1,28 @@
 package me.Zecterma.InDeciple;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import me.Zecterma.InDeciple.Commands.InDecipleCommand;
+import me.Zecterma.InDeciple.Commands.InDecipleFreezeCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleGCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleListCommand;
 import net.milkbowl.vault.economy.Economy;
 
 import org.bukkit.ChatColor;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class InDeciple extends JavaPlugin {
 	public Economy economy = null;
-
+	public final PlayerListener pl =  new PlayerListener(this);
+	public final HashMap<Player, ArrayList<Block>> hashmap = new HashMap<Player, ArrayList<Block>>();
 
 	@Override
     public void onEnable(){
@@ -31,6 +37,7 @@ public class InDeciple extends JavaPlugin {
 			saveConfig();
 		}
 		
+		this.getServer().getPluginManager().registerEvents(this.pl, this);
 		
 		
 		this.setupEconomy();
@@ -39,6 +46,7 @@ public class InDeciple extends JavaPlugin {
 		getCommand("indeciplelist").setExecutor(new InDecipleListCommand(this));
 		getCommand("g").setExecutor(new InDecipleGCommand(this));
 		getCommand("indeciple").setExecutor(new InDecipleCommand(this));
+		getCommand("freeze").setExecutor(new InDecipleFreezeCommand(this));
 
 
 	}
