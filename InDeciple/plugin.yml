@@ -7,10 +7,13 @@ main: me.Zecterma.InDeciple.InDeciple
 commands:
   indeciple:
     description: InDeciple Main command.
+    
   indeciplereload:
     description: InDeciple config reload.
+    
   indeciplelist:
     description: InDeciple Commands List
+    
   g:
     description: Change gamemode.
 
@@ -18,4 +21,13 @@ commands:
 permissions:
   indeciple.indeciple:
     default: op
-    description: This permission allowes you to use /InDeciple
+    description: Permission to /indeciple
+  indeciple.g:
+    default: op
+    description: Permission to /g
+  indeciple.list:
+    default: op
+    description: Permission to /indeciplelist
+  indeciple.reload:
+    default: op
+    description: Permission to /indeciplereload

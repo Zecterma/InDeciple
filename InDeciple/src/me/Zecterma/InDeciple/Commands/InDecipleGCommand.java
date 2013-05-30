@@ -21,8 +21,9 @@ public class InDecipleGCommand implements CommandExecutor {
 		return false;
 	}
 		public void readCommand(Player player, String command) {
-			
+			if(player.hasPermission("indeciple.g")){
 				if(player.getGameMode() == GameMode.SURVIVAL) {
+					
 					player.setGameMode(GameMode.CREATIVE);
 					player.sendMessage(ChatColor.DARK_GREEN + "Now in " + ChatColor.GOLD + "creative" + ChatColor.DARK_GREEN + " mode.");
 				} else {
@@ -30,7 +31,10 @@ public class InDecipleGCommand implements CommandExecutor {
 					player.sendMessage(ChatColor.DARK_GREEN + "Now in " + ChatColor.GOLD + "survival" + ChatColor.DARK_GREEN + " mode.");
 				}
 			
+			} else {
+				player.sendMessage("You don't have permissions for this command.");
 			}
+		}
 		}
 		
 		

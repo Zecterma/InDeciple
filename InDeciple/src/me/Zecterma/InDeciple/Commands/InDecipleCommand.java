@@ -25,19 +25,18 @@ public class InDecipleCommand implements CommandExecutor {
 				return true;
 			}
 			
-			
+			if(cs.hasPermission("indeciple.indeciple")){
 			
 			
 	
 				cs.sendMessage(ChatColor.DARK_GREEN + plugin.getConfig().getString("Welcome Message"));
 				
-			} else {
-						cs.sendMessage(ChatColor.DARK_RED + "Something went wrong.");
-						return true;
-					}
+			} 
 					
 				
-				
+		 else {
+			cs.sendMessage("You don't have permissions for this command.");
+		}
 
 		
 		
@@ -46,7 +45,8 @@ public class InDecipleCommand implements CommandExecutor {
 	
 	
 }
-}
+		return false;
+	}}
 	
 	
 	

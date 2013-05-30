@@ -22,21 +22,16 @@ public class InDecipleListCommand implements CommandExecutor {
 			}
 			
 			
-			
+			if(cs.hasPermission("indeciple.list")){
 			
 			
 				cs.sendMessage(ChatColor.DARK_PURPLE + "/g " + ChatColor.DARK_GREEN + "- Switches gamemode");
 				cs.sendMessage(ChatColor.DARK_PURPLE + "/indeciplereload " + ChatColor.DARK_GREEN + "- Reloads the config");
 
 				
-			} else {
-						cs.sendMessage(ChatColor.DARK_RED + "Something went wrong.");
-						return true;
-					}
-					
-				
-				
-
+			}  else {
+			cs.sendMessage("You don't have permissions for this command.");
+		}
 		
 		
 		
@@ -44,4 +39,5 @@ public class InDecipleListCommand implements CommandExecutor {
 	
 	
 }
-}
+		return false;
+}}

@@ -49,8 +49,12 @@ public class InDeciple extends JavaPlugin {
     }
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (label.equalsIgnoreCase("indeciplereload")){
+			if(sender.hasPermission("indeciple.reload")){
 			this.reloadConfig();
 			sender.sendMessage(ChatColor.DARK_GREEN + "Configuration reloaded!");
+			} else {
+				sender.sendMessage("You don't have permissions for this command.");
+			}
 		}
 		
 		return false;
