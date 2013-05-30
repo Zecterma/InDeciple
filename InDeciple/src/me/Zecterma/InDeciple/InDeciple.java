@@ -1,5 +1,7 @@
 package me.Zecterma.InDeciple;
 
+import java.io.File;
+
 import me.Zecterma.InDeciple.Commands.InDecipleCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleGCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleListCommand;
@@ -13,6 +15,19 @@ public class InDeciple extends JavaPlugin {
 
 	@Override
     public void onEnable(){
+		
+		File file = new File(getDataFolder() + File.separator + "config.yml");
+		
+		if (!file.exists()){
+			this.getLogger().info("Generating config.yml...");
+			
+			this.getConfig().addDefault("message", "This is my message!");
+			this.getConfig().options().copyDefaults(true);
+			this.saveConfig();
+		}
+		
+		
+		
 		this.setupEconomy();
 		System.out.println("Starting InDeciple...");
 		
