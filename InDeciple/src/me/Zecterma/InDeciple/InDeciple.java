@@ -6,6 +6,10 @@ import me.Zecterma.InDeciple.Commands.InDecipleCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleGCommand;
 import me.Zecterma.InDeciple.Commands.InDecipleListCommand;
 import net.milkbowl.vault.economy.Economy;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -42,7 +46,15 @@ public class InDeciple extends JavaPlugin {
     public void onDisable() {
     	System.out.println("InDeciple stopped.");
     }
-	
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		if (label.equalsIgnoreCase("indeciplereload")){
+			this.reloadConfig();
+			sender.sendMessage(ChatColor.DARK_GREEN + "Configuration reloaded!");
+		}
+		
+		return false;
+		
+	}
     private boolean setupEconomy() {
         RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
         if (economyProvider != null) {

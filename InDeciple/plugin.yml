@@ -7,6 +7,8 @@ main: me.Zecterma.InDeciple.InDeciple
 commands:
   indeciple:
     description: InDeciple Main command.
+  indeciplereload:
+    description: Reloads the config file.
   idcl:
     description: InDeciple Commands List
   gmmode:
